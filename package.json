@@ -1,0 +1,15 @@
+{
+  "name": "LurpisBarber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "eslint": "^6.4.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2",
+    "nunjucks": "^3.2.0"
+  }
+}
