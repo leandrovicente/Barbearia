@@ -7,7 +7,7 @@ class App {
     this.express = express();
     this.isDev = process.env.NODE_ENV != "production";
     this.middlewares();
-    this.views();
+    // this.views();
     this.routes();
   }
   middlewares() {
@@ -23,7 +23,9 @@ class App {
     );
     this.express.set("view engine", "njk");
   }
-  routes() {}
+  routes() {
+    this.express.use(require("./routes"));
+  }
 }
 
 module.exports = new App().express;
