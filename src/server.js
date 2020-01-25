@@ -7,20 +7,18 @@ class App {
     this.express = express();
     this.isDev = process.env.NODE_ENV != "production";
     this.middlewares();
-    // this.views();
+    this.views();
     this.routes();
   }
   middlewares() {
     this.express.use(express.urlencoded({ extended: false }));
   }
   views() {
-    nunjucks.configure(
-      path.resolve(__dirname, "app", "views", {
-        watch: this.isDev,
-        express: this.express,
-        autoescape: true
-      })
-    );
+    nunjucks.configure(path.resolve(__dirname, "app", "views"), {
+      watch: this.isDev,
+      express: this.express,
+      autoescape: true
+    });
     this.express.set("view engine", "njk");
   }
   routes() {
