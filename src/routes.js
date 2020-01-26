@@ -6,6 +6,7 @@ const routes = express.Router();
 
 const UserController = require("./app/controllers/UserControllers");
 const SessionControllers = require("./app/controllers/SessionControllers");
+const DashboardControllers = require("./app/controllers/DashBoardControllers");
 
 const authMiddlewares = require("./app/middlewares/auth");
 const guestMiddlewares = require("./app/middlewares/guest");
@@ -27,9 +28,6 @@ routes.use("/app", authMiddlewares);
 
 routes.get("/app/logout", SessionControllers.destroy);
 
-routes.get("/app/dashboard", (req, res) => {
-  console.log(req.session.user);
-  return res.render("dashboard");
-});
+routes.get("/app/dashboard", DashboardControllers.index);
 
 module.exports = routes;
