@@ -52,7 +52,23 @@ body {
 .auth-wrapper form > img {
   margin-bottom: 20px;
 }
+.main-wrapper .content a {
+  background: #7159c1;
+  text-decoration: none;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 0;
+  color: #fff;
+}
 
+.main-wrapper .content a:hover {
+  background: #634dac;
+}
 .auth-wrapper form input:not([type="checkbox"]) {
   height: 40px;
   padding: 0 15px;
@@ -150,6 +166,7 @@ body {
 }
 
 .main-wrapper .content a.logout {
+  margin-top: 3px;
   background: #de6d6d;
   text-decoration: none;
   height: 40px;
@@ -165,6 +182,7 @@ body {
 
 .main-wrapper .content a.logout:hover {
   background: #c15858;
+  margin-top: 3px;
 }
 
 .main-wrapper .content p {
