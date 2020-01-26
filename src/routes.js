@@ -7,11 +7,16 @@ const routes = express.Router();
 const UserController = require("./app/controllers/UserControllers");
 const SessionControllers = require("./app/controllers/SessionControllers");
 
-routes.get("/", SessionControllers.create);
-routes.post("/signin", SessionControllers.store);
+const authMiddlewares = require("./app/middlewares/auth");
+const guestMiddlewares = require("./app/middlewares/guest");
+
+routes.get("/", guestMiddlewares, SessionControllers.create);
+routes.post("/signin", guestMiddlewares, SessionControllers.store);
 
 routes.get("/signup", UserController.create);
 routes.post("/signup", upload.single("avatar"), UserController.store);
+
+routes.use("/app", authMiddlewares);
 
 routes.get("/app/dashboard", (req, res) => {
   console.log(req.session.user);

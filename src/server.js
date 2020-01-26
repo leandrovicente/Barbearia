@@ -2,6 +2,7 @@ const express = require("express");
 const nunjucks = require("nunjucks");
 const path = require("path");
 const session = require("express-session");
+const FileStore = require("session-file-store")(session);
 
 class App {
   constructor() {
@@ -15,8 +16,12 @@ class App {
     this.express.use(express.urlencoded({ extended: false }));
     this.express.use(
       session({
+        name: "root",
         secret: "MyAppSecret",
         resave: false,
+        store: new FileStore({
+          path: path.resolve(__dirname, "..", "tmp", "sessions")
+        }),
         saveUninitialized: false
       })
     );
