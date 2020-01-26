@@ -1,6 +1,7 @@
 const express = require("express");
 const nunjucks = require("nunjucks");
 const path = require("path");
+const session = require("express-session");
 
 class App {
   constructor() {
@@ -12,6 +13,13 @@ class App {
   }
   middlewares() {
     this.express.use(express.urlencoded({ extended: false }));
+    this.express.use(
+      session({
+        secret: "MyAppSecret",
+        resave: false,
+        saveUninitialized: false
+      })
+    );
   }
   views() {
     nunjucks.configure(path.resolve(__dirname, "app", "views"), {
