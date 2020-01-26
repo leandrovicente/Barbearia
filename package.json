@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "core-util-is": "^1.0.2",
     "editorconfig": "^0.15.3",
     "eslintrc": "^1.0.6",
