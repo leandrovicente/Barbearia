@@ -16,7 +16,7 @@ button {
 }
 
 body {
-  background: #7159c1;
+  background: #000568;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   text-rendering: optimizelegibility !important;
@@ -53,7 +53,7 @@ body {
   margin-bottom: 20px;
 }
 .main-wrapper .content a {
-  background: #7159c1;
+  background: #000cff;
   text-decoration: none;
   height: 40px;
   display: flex;
@@ -67,7 +67,7 @@ body {
 }
 
 .main-wrapper .content a:hover {
-  background: #634dac;
+  background: #000568;
 }
 .auth-wrapper form input:not([type="checkbox"]) {
   height: 40px;
@@ -126,12 +126,12 @@ body {
   font-size: 14px;
   border: 0;
   color: #fff;
-  background: #7159c1;
+  background: #000cff;
   margin-top: 5px;
 }
 
 .auth-wrapper form button:hover {
-  background: #634dac;
+  background: #000568;
 }
 
 .auth-wrapper form a {
@@ -167,7 +167,7 @@ body {
 
 .main-wrapper .content a.logout {
   margin-top: 3px;
-  background: #de6d6d;
+  background: #c15858;
   text-decoration: none;
   height: 40px;
   display: flex;
@@ -181,7 +181,7 @@ body {
 }
 
 .main-wrapper .content a.logout:hover {
-  background: #c15858;
+  background: #ff0000;
   margin-top: 3px;
 }
 
