@@ -1,3 +1,3 @@
-# Barbearia
+# LurpiBarber
 
 Opensource Para Barbearias
