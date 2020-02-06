@@ -7,7 +7,7 @@ LURPIBARBE</h3>
 
 
 
-# Sobre o LURPIBARBE
+# Sobre LURPIBARBE
 
 Uma aplicação criada para desenvolver os conhecimentos em node.js.
 Codigo totalmente aberto, então sinta-se a vontade a para modificar, utilizar, vender etc.
