@@ -14,7 +14,7 @@
     "core-util-is": "^1.0.2",
     "editorconfig": "^0.15.3",
     "eslintrc": "^1.0.6",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.0",
     "moment": "^2.24.0",
     "multer": "^1.4.2",
